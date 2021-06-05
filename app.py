@@ -29,4 +29,4 @@ def conference():
 def events():
     for key, value in request.form.items():
         print(f"{key=} - {value=}")
-    return "", 202
+    return "", 200
