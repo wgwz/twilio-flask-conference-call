@@ -1,14 +1,13 @@
-from logging import basicConfig
 from flask import Flask, Response, request
 from twilio.twiml.voice_response import VoiceResponse, Dial
 
 
-basicConfig(level="INFO")
 app = Flask(__name__)
 
 
 @app.route("/conference", methods=["GET", "POST"])
 def conference():
+    print(f"{request.form=}")
     response = VoiceResponse()
     dial = Dial()
     dial.conference(
@@ -22,6 +21,6 @@ def conference():
 
 @app.route("/events", methods=["POST"])
 def events():
-    for key, value in request.values.items():
-        app.logger.info("%s - %s", key, value)
+    for key, value in request.form.items():
+        print(f"{key=} - {value=}")
     return "", 202
