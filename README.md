@@ -7,6 +7,10 @@ and Flask.
 
 ## Getting Started
 
+This includes some of the basics for running the application however
+you will need to make use of the Twilio console. You can follow the
+article linked above to get up and running.
+
 ### Installing
 
 ```
@@ -22,12 +26,16 @@ Run the flask development server
 (venv) $ flask run
 ```
 
-Visit [localhost:5000/conference](localhost:5000/conference)
+Run ngrok
+```
+(venv) $ ngrok http 5000
+```
 
 ## Built With
 
-* [Flask](https://flask.palletsprojects.com/) - The web framework used
-* [Twilio Python](https://github.com/twilio/twilio-python) - For Twiml 
+* [Flask](https://flask.palletsprojects.com/)
+* [Twilio Python](https://github.com/twilio/twilio-python)
+* [pyngrok](https://pyngrok.readthedocs.io/en/latest/index.html)
 
 ## License
 
